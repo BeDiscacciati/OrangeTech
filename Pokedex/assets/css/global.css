@@ -20,11 +20,20 @@ body{
     text-align: center;
 }
 
+#pokemonDetail{
+    padding: 1rem 0;
+    background-color: white;
+    height: 100vh;
+    max-width: 450px;
+    justify-content: center;
+    margin: auto;
+    border-radius: 1rem;
+}
+
 @media screen and (min-width: 992px){
     .content{
         max-width: 992px;
         margin: auto;
         border-radius: 1rem;
     }
-    
 }

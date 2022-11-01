@@ -7,7 +7,7 @@ const maxRecord = 300
 
 function convertPokemonToLi(pokemon){
     return `
-    <a href="details.html" id="goToDetail" pokeId="${pokemon.id}">
+    <a href="details.html?id=${pokemon.id}" id="goToDetail">
             <li id="goToDetail" class="pokemon ${pokemon.type}">
                 <span class="number">#${pokemon.id}</span>
                 <span class="name">${pokemon.name}</span>

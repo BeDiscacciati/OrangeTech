@@ -127,7 +127,7 @@ a{
     padding: 1rem;
 }
 
-#loadMoreButton{
+button{
     border-radius: 1rem;
     background-color: #6c79db;
     border: none;
@@ -136,6 +136,9 @@ a{
     margin: .25rem 0;
     font-size: .825rem;
 }
+
+
+/* Pokedex Details */
 
 #mainInfo{
     padding: 1.5rem 1rem;
@@ -167,17 +170,14 @@ a{
 }
 
 #details{
-    
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: 1fr;
-    
+    grid-template-columns: 1fr;  
 }
 .stats{
     list-style: none;
     display: flex;
     flex-direction: column;
-    
 }
 .stat{
     padding: 0 1rem 0 1rem;
@@ -187,18 +187,41 @@ a{
     align-items: center;
     justify-content: space-between;
 }
+
 .line {
     width: 50%;
-    height: .1rem;
-    border: solid;
-    border-radius: 1rem;
-    border-color: rgba(128, 128, 128, 0.138);
-    margin-left: 2rem;
+    position: relative;
 }
+
+.line::after, .line::before {
+  content:' ';
+  position: absolute;
+  max-width: 90%;
+  height: .5rem;
+}
+
+.line::after{
+    margin-left: 2rem;
+    border-radius: .5rem;
+    background: green;  
+    width: 10%;
+}
+
+.line::before {
+    background-color: rgba(128, 128, 128, 0.138);
+    margin-left: 2rem;
+    border-radius: .5rem;
+    width: 100%;
+}
+
 .statName{
     flex-grow: 1;
 }
+#imgDetail{
+    max-height: 180px;
+}
 
+/* Responsive */
 @media screen and (min-width: 393px){
     .pokemons{
         grid-template-columns: 1fr 1fr;
@@ -215,5 +238,4 @@ a{
     .pokemons{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    
 }
